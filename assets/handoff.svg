@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 280" role="img" aria-labelledby="handoffTitle handoffDesc">
+  <title id="handoffTitle">A three-bot handoff</title>
+  <desc id="handoffDesc">Research bot passes a brief to Draft bot, which passes a draft to Review bot. Each arrow is a written handoff, not a shared memory.</desc>
+  <style>
+    .box { fill: #fffdf8; stroke: #1c1b18; stroke-width: 1.5; }
+    .label { font: 700 16px ui-sans-serif, system-ui, sans-serif; fill: #1c1b18; }
+    .sub { font: 400 13px ui-sans-serif, system-ui, sans-serif; fill: #5a574e; }
+    .arrow { stroke: #0d5c4d; stroke-width: 2.25; fill: none; marker-end: url(#arrow); }
+    .note { font: 600 12px ui-sans-serif, system-ui, sans-serif; fill: #0d5c4d; }
+    .chip { fill: #0d5c4d; }
+    .chip-text { font: 700 11px ui-sans-serif, system-ui, sans-serif; fill: #f4f0e8; }
+  </style>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0d5c4d"/>
+    </marker>
+  </defs>
+  <rect x="24" y="48" width="200" height="150" rx="10" class="box"/>
+  <rect x="40" y="64" width="72" height="22" rx="11" class="chip"/>
+  <text x="76" y="79" text-anchor="middle" class="chip-text">BOT A</text>
+  <text x="44" y="114" class="label">Research</text>
+  <text x="44" y="138" class="sub">Scope: sources only.</text>
+  <text x="44" y="158" class="sub">Output: a brief, not a draft.</text>
+
+  <path d="M236 118 H 308" class="arrow"/>
+  <text x="272" y="108" text-anchor="middle" class="note">handoff</text>
+
+  <rect x="320" y="48" width="200" height="150" rx="10" class="box"/>
+  <rect x="336" y="64" width="72" height="22" rx="11" class="chip"/>
+  <text x="372" y="79" text-anchor="middle" class="chip-text">BOT B</text>
+  <text x="340" y="114" class="label">Draft</text>
+  <text x="340" y="138" class="sub">Scope: write from the brief.</text>
+  <text x="340" y="158" class="sub">Output: a first pass.</text>
+
+  <path d="M532 118 H 604" class="arrow"/>
+  <text x="568" y="108" text-anchor="middle" class="note">handoff</text>
+
+  <rect x="616" y="48" width="200" height="150" rx="10" class="box"/>
+  <rect x="632" y="64" width="86" height="22" rx="11" class="chip"/>
+  <text x="675" y="79" text-anchor="middle" class="chip-text">BOT C</text>
+  <text x="636" y="114" class="label">Review</text>
+  <text x="636" y="138" class="sub">Scope: check and tighten.</text>
+  <text x="636" y="158" class="sub">Output: a shippable version.</text>
+
+  <text x="420" y="236" text-anchor="middle" class="sub">Each bot keeps a narrow job. The written handoff is the only thing that moves.</text>
+</svg>
