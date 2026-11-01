@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>What Can Grok Bot Do? Use Cases, Prompts &amp; Tips</title>
+    <meta
+      name="description"
+      content="What Grok Bot can do for beginners: running multiple bots, example prompts, usage limits, privacy settings, and a few practical tips."
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://trevoraquino.me/grokbot-guide/what-can-grok-bot-do.html" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="assets/favicon.svg" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="The Unofficial Grok Bot Starter Guide" />
+    <meta property="og:title" content="What Can Grok Bot Do?" />
+    <meta
+      property="og:description"
+      content="Realistic use cases, example prompts, usage limits, privacy settings, and a few practical tips for Grok Bot beginners."
+    />
+    <meta property="og:url" content="https://trevoraquino.me/grokbot-guide/what-can-grok-bot-do.html" />
+    <meta property="og:image" content="https://trevoraquino.me/grokbot-guide/assets/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="What Can Grok Bot Do?" />
+    <meta
+      name="twitter:description"
+      content="Realistic use cases, example prompts, usage limits, privacy settings, and a few practical tips for Grok Bot beginners."
+    />
+    <meta name="twitter:image" content="https://trevoraquino.me/grokbot-guide/assets/og-image.png" />
+    <meta name="theme-color" content="#0d5c4d" />
+    <link rel="preload" href="styles.css" as="style" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://buy.stripe.com" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://trevoraquino.me/grokbot-guide/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "What can Grok Bot do?",
+            "item": "https://trevoraquino.me/grokbot-guide/what-can-grok-bot-do.html"
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="wrap">
+        <a class="mark" href="index.html">The Unofficial Grok Bot Starter Guide</a>
+        <nav class="nav" aria-label="Primary">
+          <a href="index.html">Home</a>
+          <a href="get-started.html">Get started</a>
+          <a href="pricing-explained.html">Pricing</a>
+          <a href="what-can-grok-bot-do.html">What it can do</a>
+        </nav>
+      </div>
+    </header>
+    <div class="notice" role="region" aria-label="Disclosure">
+      <div class="wrap">
+        <strong class="disclosure-label">Disclosure:</strong>
+        Independent, unofficial guide by Trevor Aquino. Not affiliated with or endorsed by
+        SpaceX, xAI, or the makers of Grok Bot.
+      </div>
+    </div>
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <div class="wrap">
+        <ol class="breadcrumb-list">
+          <li><a href="index.html">Home</a></li>
+          <li aria-current="page">What can Grok Bot do?</li>
+        </ol>
+      </div>
+    </nav>
+
+    <main id="main">
+      <section aria-labelledby="page-title">
+        <div class="wrap">
+          <div class="section-head">
+            <h1 id="page-title">What can Grok Bot do?</h1>
+            <p class="section-intro">
+              What Grok Bot can actually do for you depends on your plan and your settings,
+              not just the product itself. This page covers general categories of use, not
+              an exhaustive feature list, and it is independent commentary, not an official
+              spec sheet.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="multiple-bots" aria-labelledby="multiple-bots-title">
+        <div class="wrap">
+          <div class="section-head">
+            <h2 id="multiple-bots-title">Run more than one focused bot</h2>
+          </div>
+          <p>
+            Grok Bot supports running multiple bots, each scoped to a different job, rather
+            than one bot handling everything. A workable starting layout, based on the
+            guide's own-use pattern, is one generalist bot for everyday questions plus a
+            couple of specialists for recurring jobs. You do not need a dozen bots for this
+            to be useful.
+          </p>
+          <p>
+            The useful part is not the number of bots, it is the handoffs between them:
+            giving one bot a narrow brief, having it hand a result to another bot, and
+            keeping each one's context from bleeding into jobs it was not scoped for. The
+            guide's chapter on using more than one bot includes a decision diagram for
+            "should this be its own bot?" that walks through exactly this.
+          </p>
+        </div>
+      </section>
+
+      <section id="prompt-examples" aria-labelledby="prompt-examples-title">
+        <div class="wrap">
+          <div class="section-head">
+            <h2 id="prompt-examples-title">Grok Bot prompts: example categories</h2>
+            <p class="section-intro">
+              The guide's 15 tested prompts fall into four categories: travel, deals,
+              errands, and monitoring or inbox tasks. Below are generic, illustrative
+              examples of the shape those prompts take, not the guide's actual tested
+              prompts and not a guarantee of any specific result.
+            </p>
+          </div>
+          <pre class="prompt"><code>Example (illustrative, travel-style):
+"Compare flight options for [dates] between [city A] and [city B].
+List price, total travel time, and number of stops. Flag anything
+with a layover over three hours."</code></pre>
+          <pre class="prompt"><code>Example (illustrative, monitoring-style):
+"Check [a specific page or listing] once a day and tell me only
+if the price drops below [amount]. Otherwise stay quiet."</code></pre>
+          <p>
+            Both examples are generic prompt shapes meant to show how a scoped request
+            looks, written for this page rather than pulled from the guide. What actually
+            works for you depends on your plan, your settings, and the specifics of your
+            request.
+          </p>
+        </div>
+      </section>
+
+      <section id="usage-depends-on-plan" aria-labelledby="usage-depends-on-plan-title">
+        <div class="wrap">
+          <div class="section-head">
+            <h2 id="usage-depends-on-plan-title">Usage limits depend on your plan</h2>
+          </div>
+          <p>
+            Grok Bot is only available on Premium, Super, or Ultra, an eligible legacy or
+            linked plan, or a team seat; Free and Plus do not include it at all. Once you
+            have access, usage draws from a shared weekly pool rather than a per-bot
+            allowance, and top-ups are available if you run through that pool. See
+            <a href="pricing-explained.html">Grok Bot pricing explained</a> for the full
+            breakdown and current numbers.
+          </p>
+        </div>
+      </section>
+
+      <section id="privacy" aria-labelledby="privacy-title">
+        <div class="wrap">
+          <div class="section-head">
+            <h2 id="privacy-title">Grok Bot privacy depends on your settings</h2>
+          </div>
+          <p>
+            Account-level privacy settings affect how Grok Bot behaves, not just whether you
+            can use it. Accounts on Privacy Mode (Legacy) are asked to switch to Privacy
+            Mode before they can start using Grok Bot at all, which is a sign that privacy
+            configuration is part of setup, not an afterthought. For anything beyond that
+            basic account setting, check your current privacy controls directly and treat
+            the guide's privacy chapter and official documentation as the places to look,
+            rather than assuming defaults.
+          </p>
+        </div>
+      </section>
+
+      <section id="tips" aria-labelledby="tips-title">
+        <div class="wrap">
+          <div class="section-head">
+            <h2 id="tips-title">A few practical Grok Bot tips</h2>
+          </div>
+          <ul>
+            <li>Give each bot a specific name and a one-line job description, not a generic label.</li>
+            <li>Do a written handoff between bots instead of letting one thread sprawl to cover everything.</li>
+            <li>Check Settings for Update versus Reset before assuming a stuck bot needs to be rebuilt from scratch.</li>
+            <li>Confirm your plan actually includes Grok Bot before troubleshooting why it will not respond.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="cta" aria-labelledby="cta-title">
+        <div class="wrap">
+          <div class="section-head">
+            <h2 id="cta-title">Go deeper</h2>
+            <p class="section-intro">
+              The full guide has all 15 tested prompts with what to expect from each, plus
+              the setup steps and pricing table.
+            </p>
+          </div>
+          <ul class="related-links">
+            <li><a href="get-started.html">How to get started with Grok Bot</a>: eligibility, Privacy Mode, and your first bot.</li>
+            <li><a href="pricing-explained.html">Grok Bot pricing explained</a>: which plan you need, and how usage limits work.</li>
+          </ul>
+          <div class="cta-buy">
+            <p class="price-display"><span class="price-value"></span></p>
+            <p class="price-note">One-time purchase. A short PDF guide, instant digital download.</p>
+            <p class="sales-final">
+              All sales are final. See the <a href="sales-policy.html">sales policy</a>.
+            </p>
+            <p>
+              <a
+                class="btn btn-primary"
+                href="https://buy.stripe.com/14A6oI05U7hmfUZ0LU9EI00"
+                target="_blank"
+                rel="noopener"
+                >Buy the guide</a
+              >
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <p>
+          Independent, unofficial guide by Trevor Aquino. Not affiliated with or endorsed by
+          SpaceX, xAI or the makers of Grok Bot. Plan prices checked
+          <time class="meta" datetime="2026-10-31">Oct 31, 2026</time> and may change; see
+          <a href="https://x.ai/pricing">x.ai/pricing</a>.
+        </p>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="get-started.html">Get started</a></li>
+          <li><a href="pricing-explained.html">Pricing explained</a></li>
+          <li><a href="what-can-grok-bot-do.html">What it can do</a></li>
+          <li><a href="terms.html">Terms</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="sales-policy.html">Sales policy</a></li>
+          <li><a href="mailto:taquino-inbox@agentmail.to">Support</a></li>
+        </ul>
+        <p>© 2026 Trevor Aquino. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

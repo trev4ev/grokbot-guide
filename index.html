@@ -8,60 +8,145 @@
       PRICE: $24
       SUPPORT_EMAIL: taquino-inbox@agentmail.to
       BUY_URL: https://buy.stripe.com/14A6oI05U7hmfUZ0LU9EI00 (live Stripe Payment Link; see CHECKLIST.md to swap providers)
-      CONTENTS: keep the ordered list in #whats-inside in sync with this list
-        1. Getting set up and how Grok Bot actually works
-        2. Using multiple bots well (when to split work, naming and scoping, routines, handoffs, with diagrams)
-        3. 10 to 15 worked example use cases with real prompts and what to expect
-        4. Current plans and pricing (prices checked on a stated date)
-        5. Tips, pitfalls, privacy and safety habits
+      CONTENTS: keep the ordered list in #contents-list in sync with this list
+        1. Getting set up (eligible plans, Privacy Mode, installing, first bot, sidebar, info pane and Settings, Update vs Reset)
+        2. Using more than one bot (when to split work, naming and scoping, handoffs, routines, a decision diagram)
+        3. Fifteen prompts that already worked (travel, deals, errands, monitoring and inbox)
+        4. Pricing, usage and what "included" means (tier table, shared weekly pool, top-ups, trials)
+        5. Tips, pitfalls, privacy and a closing checklist
+      PAGE COUNT: deliberately not stated anywhere on this site. Do not add one until the
+      author confirms the final PDF; see CHECKLIST.md.
     -->
-    <title>The Grok Bot Starter Guide</title>
+    <title>The Unofficial Grok Bot Starter Guide: Setup, Plans &amp; 15 Tested Prompts (PDF)</title>
     <meta
       name="description"
-      content="An independent PDF starter guide for new Grok Bot users. Setup, multi-bot workflows, worked examples, current plans, and practical habits. Written by Trevor Aquino. Not affiliated with xAI or SpaceX."
+      content="Plain-English starter guide for new Grok Bot users: setup, which plan includes it, one bot per job, 15 tested prompts. Unofficial and independent."
     />
-    <link rel="canonical" href="https://trev4ev.github.io/grokbot-guide/" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://trevoraquino.me/grokbot-guide/" />
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="assets/favicon.svg" />
     <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="The Grok Bot Starter Guide" />
-    <meta property="og:title" content="The Grok Bot Starter Guide" />
+    <meta property="og:site_name" content="The Unofficial Grok Bot Starter Guide" />
+    <meta property="og:title" content="The Unofficial Grok Bot Starter Guide: Setup, Plans &amp; 15 Tested Prompts (PDF)" />
     <meta
       property="og:description"
-      content="An independent PDF for people who just got Grok Bot and want a clear way to start. By Trevor Aquino."
+      content="Plain-English starter guide for new Grok Bot users: setup, which plan includes it, one bot per job, 15 tested prompts. Unofficial and independent."
     />
-    <meta property="og:url" content="https://trev4ev.github.io/grokbot-guide/" />
+    <meta property="og:url" content="https://trevoraquino.me/grokbot-guide/" />
     <meta
       property="og:image"
-      content="https://trev4ev.github.io/grokbot-guide/assets/og-image.png"
+      content="https://trevoraquino.me/grokbot-guide/assets/og-image.png"
     />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="The Grok Bot Starter Guide" />
+    <meta name="twitter:title" content="The Unofficial Grok Bot Starter Guide" />
     <meta
       name="twitter:description"
-      content="An independent PDF starter guide for new Grok Bot users. By Trevor Aquino."
+      content="Plain-English starter guide for new Grok Bot users: setup, which plan includes it, one bot per job, 15 tested prompts."
     />
     <meta
       name="twitter:image"
-      content="https://trev4ev.github.io/grokbot-guide/assets/og-image.png"
+      content="https://trevoraquino.me/grokbot-guide/assets/og-image.png"
     />
     <meta name="theme-color" content="#0d5c4d" />
+    <link rel="preload" href="styles.css" as="style" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://buy.stripe.com" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Product",
+            "name": "The Unofficial Grok Bot Starter Guide",
+            "description": "A practical starter guide for people new to Grok Bot, covering setup, how to split everyday jobs (inbox, travel, shopping, reminders) across bots, fifteen copy-paste prompts that already worked, and current plan pricing checked October 31, 2026. An independent, unofficial product by Trevor Aquino, not affiliated with or endorsed by SpaceX or the makers of Grok Bot.",
+            "image": "https://trevoraquino.me/grokbot-guide/assets/og-image.png",
+            "brand": { "@type": "Person", "name": "Trevor Aquino" },
+            "offers": {
+              "@type": "Offer",
+              "url": "https://buy.stripe.com/14A6oI05U7hmfUZ0LU9EI00",
+              "priceCurrency": "USD",
+              "price": "24.00",
+              "availability": "https://schema.org/InStock",
+              "itemCondition": "https://schema.org/NewCondition",
+              "seller": { "@type": "Person", "name": "Trevor Aquino" }
+            }
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What format is it?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "A designed PDF guide. You can read it on a phone, tablet, or computer. It is not a Notion doc, not a video, and not a live workshop."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How do I get the file after I pay?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Right after you pay, you're taken straight to the PDF download page. An automatic email from taquino-inbox@agentmail.to also arrives with the same download link, so you still have it if you close that page. If neither shows up, email taquino-inbox@agentmail.to and I will send the file directly. This site does not host a login or a file locker."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Which plan do I need?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Grok Bot is not on every plan. You need Premium, Super, or Ultra on The X Subscription, an individual or team seat, or an eligible legacy or linked plan. Free and Plus do not include it. The guide's pricing chapter covers the full table, and the pricing explained page on this site has a short version."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is this official?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. This is an independent guide by Trevor Aquino. It is not affiliated with, endorsed by, or sponsored by SpaceX, xAI, or the makers of Grok Bot. I do not use their logos."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is the pricing information current?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Prices and plan details were checked against the official pricing page on October 31, 2026, and they are labeled that way in the guide. Plans and prices change, so confirm the current price on x.ai/pricing before you buy or upgrade a plan."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Do I get updates?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes, for revised editions of this guide. I will email the file to the address used at checkout. I am not promising a course portal or unlimited future titles."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Do you store my payment details?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. Payment is handled by Stripe. This site has no analytics, no cookies, and no payment forms of its own."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <a class="skip" href="#main">Skip to content</a>
     <header class="site-header">
       <div class="wrap">
-        <a class="mark" href="index.html">
-          <img class="mark-icon" src="assets/favicon.svg" width="32" height="32" alt="" />
-          The Grok Bot Starter Guide
-        </a>
+        <a class="mark" href="index.html">The Unofficial Grok Bot Starter Guide</a>
         <nav class="nav" aria-label="Primary">
           <a href="#whats-inside">Inside</a>
-          <a href="#who">Who it is for</a>
-          <a href="#sample">Sample</a>
+          <a href="#who">Who it's for</a>
           <a href="#buy">Price</a>
           <a href="#faq">FAQ</a>
           <a href="#contact">Contact</a>
@@ -70,7 +155,8 @@
     </header>
     <div class="notice" role="region" aria-label="Disclosure">
       <div class="wrap">
-        Independent, unofficial guide. Not affiliated with, endorsed by, or sponsored by
+        <strong class="disclosure-label">Disclosure:</strong>
+        Independent, unofficial guide by Trevor Aquino. Not affiliated with or endorsed by
         SpaceX, xAI, or the makers of Grok Bot.
       </div>
     </div>
@@ -79,14 +165,10 @@
       <section class="hero" aria-labelledby="hero-title">
         <div class="wrap">
           <p class="kicker">PDF guide · one-time purchase</p>
-          <h1 id="hero-title">Start using Grok Bot like you meant to.</h1>
+          <h1 id="hero-title">The Unofficial Grok Bot Starter Guide</h1>
           <p class="lede">
-            A designed PDF for people who just got Grok Bot and do not want to spend a week
-            reverse-engineering it. Setup, how to split work across bots, worked examples
-            with real prompts, current plans, and the habits that keep you out of trouble.
-          </p>
-          <p class="fine">
-            <strong>Because the guide is an instant digital download, all sales are final.</strong>
+            Set up Grok Bot, assign the right bot to each job, and skip the usual first-week
+            trial and error.
           </p>
           <div class="hero-actions">
             <!-- Buy URL: https://buy.stripe.com/14A6oI05U7hmfUZ0LU9EI00 (Stripe Payment Link, see CHECKLIST.md to swap). -->
@@ -94,59 +176,82 @@
             <a class="btn btn-ghost" href="#whats-inside">See what is inside</a>
           </div>
           <p class="meta-line">
-            By Trevor Aquino. About 20 to 30 pages. Tentative price
-            <span class="price-value"></span>, one time.
+            By Trevor Aquino. A short, practical PDF guide. <span class="price-value"></span>, one time.
           </p>
+          <p class="sales-final">All sales are final. This is an instant digital download.</p>
+        </div>
+      </section>
+
+      <section id="capabilities" aria-labelledby="capabilities-title">
+        <div class="wrap">
+          <div class="section-head">
+            <h2 id="capabilities-title">What you'll be able to do</h2>
+            <p class="section-intro">
+              This guide is built to save the time most beginners spend learning how to use
+              Grok Bot by trial and error.
+            </p>
+          </div>
+          <ul class="outcomes">
+            <li>Get Grok Bot set up correctly the first time, on a plan that actually includes it.</li>
+            <li>Pick the right plan before you pay, instead of guessing from an old blog post or screenshot.</li>
+            <li>Start from prompts that already worked, instead of a blank chat box.</li>
+            <li>Run more than one bot without losing track of what each one is for.</li>
+            <li>Spot the common early mistakes before you make them.</li>
+          </ul>
         </div>
       </section>
 
       <section id="whats-inside" aria-labelledby="inside-title">
         <div class="wrap">
-          <h2 id="inside-title">What is inside</h2>
-          <p class="section-intro">
-            Five chapters. The PDF is still being written, so treat this as the working
-            outline, not a locked table of contents.
-          </p>
+          <div class="section-head">
+            <h2 id="inside-title">What's inside (5 chapters)</h2>
+            <p class="section-intro">
+              Five chapters, written for someone who just got access to Grok Bot and wants a
+              clear path through it, start to finish.
+            </p>
+          </div>
           <ol class="contents" id="contents-list">
             <li>
               <span class="num" aria-hidden="true">01</span>
-              <h3>Getting set up, and how Grok Bot actually works</h3>
+              <h3>Getting set up</h3>
               <p>
-                Accounts, first run, what a bot is, what it is not, and the few settings that
-                change results more than people think.
+                Checking you have an eligible plan, switching out of Privacy Mode (Legacy) if
+                needed, installing, starting your first bot, and getting comfortable with the
+                sidebar, info pane, and Settings, including the difference between Update and
+                Reset.
               </p>
             </li>
             <li>
               <span class="num" aria-hidden="true">02</span>
-              <h3>Using multiple bots well</h3>
+              <h3>Using more than one bot</h3>
               <p>
-                When to split work, how to name and scope a bot, daily routines, and
-                handoffs. Includes diagrams of who should talk to whom.
+                When to split work across bots, how to name and scope each one, handoffs,
+                daily routines, and a simple diagram for deciding whether something should be
+                its own bot.
               </p>
             </li>
             <li>
               <span class="num" aria-hidden="true">03</span>
-              <h3>10 to 15 worked example use cases</h3>
+              <h3>Fifteen prompts that already worked</h3>
               <p>
-                Real prompts, the setup around them, and what a good result looks like so you
-                can tell when it went sideways.
+                Real prompts for travel, deals, errands, and monitoring or inbox tasks, each
+                with what to expect and the lesson behind it.
               </p>
             </li>
             <li>
               <span class="num" aria-hidden="true">04</span>
-              <h3>Current plans and pricing</h3>
+              <h3>Pricing, usage and what "included" means</h3>
               <p>
-                What the official plans cover, with prices checked on a stated date, so you
-                are not guessing from a screenshot someone posted last spring.
+                A plan-by-plan table, how the shared weekly usage pool works, when top-ups
+                make sense, and how free trials work.
               </p>
             </li>
             <li>
               <span class="num" aria-hidden="true">05</span>
-              <h3>Tips, pitfalls, privacy and safety habits</h3>
+              <h3>Tips, pitfalls, privacy and a closing checklist</h3>
               <p>
-                The boring rules that save you: what not to paste, when to distrust a
-                confident answer, and how to keep bots from leaking work into the wrong
-                thread.
+                The habits that keep you out of trouble, common early mistakes, privacy
+                settings worth checking, and a one-page checklist to finish with.
               </p>
             </li>
           </ol>
@@ -155,24 +260,26 @@
 
       <section id="who" aria-labelledby="who-title">
         <div class="wrap">
-          <h2 id="who-title">Who it is for</h2>
+          <div class="section-head">
+            <h2 id="who-title">Who it's for</h2>
+          </div>
           <div class="split">
             <article class="card">
               <h3>Buy this if</h3>
               <ul>
-                <li>You are new to Grok Bot and want a short, opinionated path, not a dump of tips.</li>
-                <li>You plan to run more than one bot and want a way to keep jobs from overlapping.</li>
-                <li>You learn faster from worked examples than from feature lists.</li>
-                <li>You want the plan and pricing picture written down, with a date on it.</li>
+                <li>You are new to Grok Bot and want a clear, plain-language starting point.</li>
+                <li>You already pay for a plan that includes Grok Bot, or you are about to pick one.</li>
+                <li>You plan to run more than one bot and want a simple way to keep their jobs separate.</li>
+                <li>You learn faster from worked prompts than from a feature list.</li>
               </ul>
             </article>
             <article class="card">
               <h3>Skip this if</h3>
               <ul>
-                <li>You want an official document from xAI, SpaceX, or the Grok Bot team. This is not that.</li>
-                <li>You need live coaching, a community, or a video course. This is a PDF.</li>
-                <li>You already have a working multi-bot setup and are looking for advanced internals.</li>
-                <li>You want enterprise policy language. I am not writing your legal pack.</li>
+                <li>You are on the Free or Plus plan and are not planning to upgrade. Those plans do not include Grok Bot.</li>
+                <li>You want an official document from xAI, SpaceX, or the Grok Bot team. This is not that; see <a href="https://x.ai/bot">x.ai/bot</a> for the official product page.</li>
+                <li>You already have a working multi-bot setup and want advanced internals, not a beginner guide.</li>
+                <li>You want a video course or live coaching. This is a PDF.</li>
               </ul>
             </article>
           </div>
@@ -181,11 +288,14 @@
 
       <section id="sample" aria-labelledby="sample-title">
         <div class="wrap">
-          <h2 id="sample-title">Sample pages</h2>
-          <p class="section-intro">
-            Page previews will go here once the PDF has layouts worth showing. Until then,
-            here is an original diagram of the multi-bot pattern the guide teaches.
-          </p>
+          <div class="section-head">
+            <h2 id="sample-title">Sample pages</h2>
+            <p class="section-intro">
+              Page previews go here once there are real exports from the designed PDF worth
+              showing. Until then, here is an original diagram of the multi-bot pattern the
+              guide teaches.
+            </p>
+          </div>
           <div class="placeholder" role="note">
             <p>
               <strong>Placeholder: sample PDF pages</strong>
@@ -209,82 +319,135 @@
       </section>
 
       <section id="buy" aria-labelledby="buy-title">
-        <div class="wrap price-block">
-          <div>
-            <h2 id="buy-title">Price and buy</h2>
-            <p class="price-display"><span class="price-value"></span></p>
-            <p>One-time purchase of the PDF. No subscription on this guide.</p>
-            <p class="fine">
-              This button opens a Stripe checkout page. After you pay, you are redirected
-              straight to the PDF download. Stripe's checkout confirmation and an automatic
-              email from
-              <a href="mailto:taquino-inbox@agentmail.to">taquino-inbox@agentmail.to</a>
-              also include the download link, so you can get it again later.
-            </p>
-            <p class="fine">
-              <strong>Because the guide is an instant digital download, all sales are final.</strong>
-              Trouble downloading? Email
-              <a href="mailto:taquino-inbox@agentmail.to">taquino-inbox@agentmail.to</a>.
-            </p>
-            <!-- Buy URL: https://buy.stripe.com/14A6oI05U7hmfUZ0LU9EI00 (Stripe Payment Link, see CHECKLIST.md to swap). -->
-            <p>
-              <a
-                class="btn btn-primary"
-                href="https://buy.stripe.com/14A6oI05U7hmfUZ0LU9EI00"
-                target="_blank"
-                rel="noopener"
-                >Buy the guide</a
-              >
+        <div class="wrap">
+          <div class="section-head">
+            <h2 id="buy-title">Price</h2>
+            <p class="section-intro">One flat price. No subscription, no upsells inside the PDF.</p>
+          </div>
+          <div class="price-block">
+            <div>
+              <p class="price-display"><span class="price-value"></span></p>
+              <p class="price-note">One-time purchase. A short PDF guide, instant digital download.</p>
+              <p class="sales-final">
+                All sales are final. Since this is an instant download, there are no refunds
+                once you have access to the file. See the
+                <a href="sales-policy.html">sales policy</a>.
+              </p>
+              <p class="fine">
+                After you pay, you're taken straight to the PDF download page. You'll also
+                get an automatic email from
+                <a href="mailto:taquino-inbox@agentmail.to">taquino-inbox@agentmail.to</a>
+                with the same download link, so you still have it if you close that page. If
+                neither shows up, email that address and I will send the file directly.
+              </p>
+              <!-- Buy URL: https://buy.stripe.com/14A6oI05U7hmfUZ0LU9EI00 (Stripe Payment Link, see CHECKLIST.md to swap). -->
+              <p>
+                <a
+                  class="btn btn-primary"
+                  href="https://buy.stripe.com/14A6oI05U7hmfUZ0LU9EI00"
+                  target="_blank"
+                  rel="noopener"
+                  >Buy the guide</a
+                >
+              </p>
+            </div>
+            <article class="card">
+              <h3>What you get</h3>
+              <ul>
+                <li>The Unofficial Grok Bot Starter Guide as a downloadable PDF guide.</li>
+                <li>Instant delivery: a download page right after payment, plus a backup copy of the link by email.</li>
+                <li>A plan and pricing table labeled with the date it was checked, so you know how current it is.</li>
+                <li>If I publish a revised edition, I will send it to the email you used at checkout.</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="unofficial" aria-labelledby="unofficial-title">
+        <div class="wrap">
+          <div class="section-head">
+            <h2 id="unofficial-title">Unofficial: what that means</h2>
+            <p class="section-intro">
+              This is an independent guide, not a document from xAI, SpaceX, or the Grok Bot
+              team. That cuts both ways, and it is worth being clear about.
             </p>
           </div>
-          <article class="card">
-            <h3>What you get</h3>
-            <ul>
-              <li>The Grok Bot Starter Guide as a designed PDF (about 20 to 30 pages).</li>
-              <li>Instant delivery. You are redirected straight to the PDF download after payment, and Stripe's checkout confirmation plus an automatic email also include the download link.</li>
-              <li>Because the guide is an instant digital download, all sales are final.</li>
-              <li>If I publish a revised file, I will send it to the email used at checkout.</li>
-            </ul>
-          </article>
+          <div class="split">
+            <article class="card">
+              <h3>What it means for you</h3>
+              <ul>
+                <li>Plain language instead of product marketing, and no corporate hedging.</li>
+                <li>One person's tested setup and prompts, not a committee's feature list.</li>
+                <li>No logos or branding borrowed from xAI or SpaceX.</li>
+              </ul>
+            </article>
+            <article class="card">
+              <h3>What it does not replace</h3>
+              <ul>
+                <li>Official documentation and support from xAI for account issues or billing disputes.</li>
+                <li>The official pricing page at <a href="https://x.ai/pricing">x.ai/pricing</a>, the source of truth, which can change after this guide is checked.</li>
+                <li>The product page at <a href="https://x.ai/bot">x.ai/bot</a> for the current, official description of Grok Bot.</li>
+              </ul>
+            </article>
+          </div>
+          <p class="meta">
+            Prices and plan details in this guide were checked against the official pricing
+            page on <time class="meta" datetime="2026-10-31">October 31, 2026</time>. Confirm the current
+            price on <a href="https://x.ai/pricing">x.ai/pricing</a> before you upgrade a
+            plan.
+          </p>
+        </div>
+      </section>
+
+      <section id="learn-more" aria-labelledby="learn-more-title">
+        <div class="wrap">
+          <div class="section-head">
+            <h2 id="learn-more-title">Want more before you buy?</h2>
+            <p class="section-intro">Three free pages cover the basics. The guide goes deeper on all of it.</p>
+          </div>
+          <ul class="related-links">
+            <li><a href="get-started.html">How to get started with Grok Bot</a>: eligibility, Privacy Mode, and your first bot.</li>
+            <li><a href="pricing-explained.html">Grok Bot pricing explained</a>: which plan you need, and how usage limits work.</li>
+            <li><a href="what-can-grok-bot-do.html">What can Grok Bot do?</a>: realistic use cases and a few tips.</li>
+          </ul>
         </div>
       </section>
 
       <section id="faq" aria-labelledby="faq-title">
         <div class="wrap">
-          <h2 id="faq-title">FAQ</h2>
+          <div class="section-head">
+            <h2 id="faq-title">FAQ</h2>
+          </div>
           <div class="faq">
             <details>
               <summary>What format is it?</summary>
               <p>
-                A designed PDF, about 20 to 30 pages. You can read it on a phone, tablet, or
-                computer. It is not a Notion doc, not a video, and not a live workshop.
+                A designed PDF guide. You can read it on a phone, tablet, or computer. It
+                is not a Notion doc, not a video, and not a live workshop.
               </p>
             </details>
             <details>
               <summary>How do I get the file after I pay?</summary>
               <p>
-                After payment you are redirected straight to the PDF download. Stripe's
-                checkout confirmation and an automatic email from
+                Right after you pay, you're taken straight to the PDF download page. An
+                automatic email from
                 <a href="mailto:taquino-inbox@agentmail.to">taquino-inbox@agentmail.to</a>
-                also include the download link, so you can get it again later. This site
-                does not host a login or a file locker. Trouble downloading? Email
-                <a href="mailto:taquino-inbox@agentmail.to">taquino-inbox@agentmail.to</a>.
+                also arrives with the same download link, so you still have it if you close
+                that page. If neither shows up, email
+                <a href="mailto:taquino-inbox@agentmail.to">taquino-inbox@agentmail.to</a>
+                and I will send the file directly. This site does not host a login or a file
+                locker.
               </p>
             </details>
             <details>
-              <summary>What if I change my mind after I buy?</summary>
+              <summary>Which plan do I need?</summary>
               <p>
-                Because the guide is an instant digital download, all sales are final.
-                Trouble downloading? Email
-                <a href="mailto:taquino-inbox@agentmail.to">taquino-inbox@agentmail.to</a>.
-              </p>
-            </details>
-            <details>
-              <summary>Do I get updates?</summary>
-              <p>
-                Yes, for revised editions of this guide. I will email the file to the address
-                used at checkout. I am not promising a course portal or unlimited future
-                titles.
+                Grok Bot is not on every plan. You need Premium, Super, or Ultra on The X
+                Subscription, an individual or team seat, or an eligible legacy or linked
+                plan. Free and Plus do not include it. The guide's pricing chapter covers the
+                full table, and the <a href="pricing-explained.html">pricing explained page</a>
+                on this site has a short version.
               </p>
             </details>
             <details>
@@ -293,6 +456,24 @@
                 No. This is an independent guide by Trevor Aquino. It is not affiliated with,
                 endorsed by, or sponsored by SpaceX, xAI, or the makers of Grok Bot. I do not
                 use their logos.
+              </p>
+            </details>
+            <details>
+              <summary>Is the pricing information current?</summary>
+              <p>
+                Prices and plan details were checked against the official pricing page on
+                <time class="meta" datetime="2026-10-31">October 31, 2026</time>, and they are labeled
+                that way in the guide. Plans and prices change, so confirm the current price
+                on <a href="https://x.ai/pricing">x.ai/pricing</a> before you buy or upgrade
+                a plan.
+              </p>
+            </details>
+            <details>
+              <summary>Do I get updates?</summary>
+              <p>
+                Yes, for revised editions of this guide. I will email the file to the address
+                used at checkout. I am not promising a course portal or unlimited future
+                titles.
               </p>
             </details>
             <details>
@@ -307,11 +488,12 @@
       </section>
 
       <section id="contact" aria-labelledby="contact-title">
-        <div class="wrap narrow">
-          <h2 id="contact-title">Contact</h2>
+        <div class="wrap">
+          <div class="section-head">
+            <h2 id="contact-title">Contact</h2>
+          </div>
           <p>
-            Trouble downloading? Email
-            <a href="mailto:taquino-inbox@agentmail.to">taquino-inbox@agentmail.to</a>.
+            Support: <a href="mailto:taquino-inbox@agentmail.to">taquino-inbox@agentmail.to</a>
           </p>
           <p>Seller: Trevor Aquino, United States.</p>
         </div>
@@ -321,12 +503,19 @@
     <footer class="site-footer">
       <div class="wrap">
         <p>
-          Independent, unofficial guide. Not affiliated with, endorsed by, or sponsored by
-          SpaceX, xAI, or the makers of Grok Bot.
+          Independent, unofficial guide by Trevor Aquino. Not affiliated with or endorsed by
+          SpaceX, xAI or the makers of Grok Bot. Plan prices checked
+          <time class="meta" datetime="2026-10-31">Oct 31, 2026</time> and may change; see
+          <a href="https://x.ai/pricing">x.ai/pricing</a>.
         </p>
         <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="get-started.html">Get started</a></li>
+          <li><a href="pricing-explained.html">Pricing explained</a></li>
+          <li><a href="what-can-grok-bot-do.html">What it can do</a></li>
           <li><a href="terms.html">Terms</a></li>
           <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="sales-policy.html">Sales policy</a></li>
           <li><a href="mailto:taquino-inbox@agentmail.to">Support</a></li>
         </ul>
         <p>© 2026 Trevor Aquino. All rights reserved.</p>
