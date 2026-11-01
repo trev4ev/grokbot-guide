@@ -32,6 +32,12 @@ Plain-English terms and privacy on this site are **template-level basics, not le
       JSON-LD on every subpage, `sitemap.xml`, `robots.txt`
 - [x] Semantic HTML, skip link, visible focus, system fonts, no trackers
 - [x] `assets/og-image.png` regenerated (1200x630) to match the current title and price
+- [x] Chapter 2 is titled "Using more than one bot" and chapter 4 "Pricing, usage and what
+      'included' means" everywhere they are named (contents list, SITE CONFIG comment, and
+      the two subpages that reference them); chapter scope is unchanged
+- [x] `Product` JSON-LD `description` on `index.html` uses the longer product description
+      provided for that field specifically; page `<meta name="description">`/OG/Twitter
+      tags keep their own short, page-specific, SEO-length copy
 
 ## Canonical URL: verify once Pages is live
 
@@ -103,9 +109,23 @@ Also per the designer's request:
 - `assets/handoff.svg` and its `<img>`/`<figure>` reference in `index.html` were left
   completely untouched.
 
+## Page count: deliberately omitted
+
+The PDF's final page count is not locked yet (expected to land around 24 to 26 pages, but
+that is not final). No page count appears anywhere on this site on purpose: not in titles,
+meta/OG/Twitter tags, `og-image.png`, JSON-LD, FAQ copy, the three subpages, or here. Where
+the old copy said "28 pages," it now says something generic like "a short PDF guide" or "a
+designed PDF guide" instead.
+
+**Do not add a page count anywhere until the author confirms the final PDF.** When that
+happens: search every `.html` file for "PDF guide" and the `price-note` lines, decide which
+of those spots should carry the real number, update the `Product` JSON-LD description in
+`index.html` if the final copy should mention it, and update this checklist.
+
 ## Placeholders to fill
 
 - [ ] Sample PDF page previews in the dashed placeholder on the home page
+- [ ] Final PDF page count (see "Page count: deliberately omitted" above)
 - [ ] Optional: real PDF filename / version string once it exists
 - [ ] If the Grok Bot pricing figures change before launch, update the tier table in
       `pricing-explained.html`, the "Which plan do I need" FAQ answer and JSON-LD in
