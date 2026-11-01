@@ -285,7 +285,11 @@ details p { margin: 0 0 1.25rem; color: var(--ink); }
 p.meta { white-space: normal; font-size: 0.8rem; line-height: 1.6; }
 .site-footer .meta { color: var(--graphite); }
 pre.prompt { margin: 1.5rem 0; padding: 1rem 0; border-left: 0; border-top: 1px solid var(--signal); border-bottom: var(--hair); background: transparent; white-space: pre-wrap; overflow-wrap: anywhere; max-width: var(--measure); font-size: 0.85rem; line-height: 1.6; }
-pre.prompt code { font-size: inherit; background: none; padding: 0; color: var(--ink); }
+pre.prompt code { font-size: inherit; background: none; padding: 0; color: var(--ink); overflow-wrap: inherit; }
+@media (max-width: 640px) {
+  pre.prompt { white-space: normal; }
+  pre.prompt code { white-space: inherit; overflow-wrap: anywhere; }
+}
 .breadcrumbs { border-bottom: var(--hair); font-family: var(--sans); font-size: 0.8rem; }
 .breadcrumbs .wrap { padding-top: 0.55rem; padding-bottom: 0.55rem; }
 .breadcrumb-list { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.25rem 0; }
