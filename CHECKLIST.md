@@ -24,8 +24,8 @@ Plain-English terms and privacy on this site are **template-level basics, not le
       link. Nowhere claims Stripe's confirmation/receipt carries the download link.
 - [x] Contents outline is one ordered list in `index.html` (`#contents-list`), matching the
       guide's real five chapters
-- [x] Sample-pages placeholder (no invented screenshots); `assets/handoff.svg` left
-      untouched per the designer's request
+- [x] Sample PDF page previews from the final 26-page PDF (`assets/previews/`);
+      `assets/handoff.svg` left untouched per the designer's request
 - [x] Original SVG handoff diagram (`assets/handoff.svg`)
 - [x] Unique `<title>` and meta description per page, canonical URLs, Open Graph tags,
       Twitter cards, `Product` + `FAQPage` JSON-LD on the home page, `BreadcrumbList`
@@ -140,7 +140,7 @@ Where it does not appear (on purpose):
 
 ## Placeholders to fill
 
-- [ ] Sample PDF page previews in the dashed placeholder on the home page
+- [x] Sample PDF page previews in the dashed placeholder on the home page
 - [x] Final PDF page count: 26 pages (see "Page count: 26 (final)" above)
 - [ ] Optional: real PDF filename / version string once it exists
 - [ ] If the Grok Bot pricing figures change before launch, update the tier table in
