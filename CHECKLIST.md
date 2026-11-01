@@ -38,6 +38,8 @@ Plain-English terms and privacy on this site are **template-level basics, not le
 - [x] `Product` JSON-LD `description` on `index.html` uses the longer product description
       provided for that field specifically; page `<meta name="description">`/OG/Twitter
       tags keep their own short, page-specific, SEO-length copy
+- [x] Final PDF page count (26) stated in hero, home meta/OG/Twitter, Product JSON-LD,
+      FAQ (visible + JSON-LD), price notes, and other beginner-facing product copy
 
 ## Canonical URL: verify once Pages is live
 
@@ -109,23 +111,37 @@ Also per the designer's request:
 - `assets/handoff.svg` and its `<img>`/`<figure>` reference in `index.html` were left
   completely untouched.
 
-## Page count: deliberately omitted
+## Page count: 26 (final)
 
-The PDF's final page count is not locked yet (expected to land around 24 to 26 pages, but
-that is not final). No page count appears anywhere on this site on purpose: not in titles,
-meta/OG/Twitter tags, `og-image.png`, JSON-LD, FAQ copy, the three subpages, or here. Where
-the old copy said "28 pages," it now says something generic like "a short PDF guide" or "a
-designed PDF guide" instead.
+The guide is locked at **26 pages**. That number is stated in beginner-facing product
+copy, and the visible FAQ text matches the FAQ JSON-LD.
 
-**Do not add a page count anywhere until the author confirms the final PDF.** When that
-happens: search every `.html` file for "PDF guide" and the `price-note` lines, decide which
-of those spots should carry the real number, update the `Product` JSON-LD description in
-`index.html` if the final copy should mention it, and update this checklist.
+Where it appears:
+
+- Home hero kicker and byline (`index.html`)
+- Home `<meta name="description">`, `og:description`, and `twitter:description`
+- `Product` JSON-LD `description` on `index.html`
+- FAQ "What format is it?" (visible `<details>` and matching JSON-LD answer)
+- `.price-note` under every price display (`index.html` and the three SEO pages)
+- "What you get" on the home page
+- CTA intros on `get-started.html`, `pricing-explained.html`, and
+  `what-can-grok-bot-do.html`
+- Terms product paragraph (`terms.html`)
+
+Where it does not appear (on purpose):
+
+- Chapter titles and chapter list (unchanged)
+- Price, buy URL, the "all sales are final" line, and the independent/unofficial
+  disclosure
+- `assets/og-image.png` / `assets/og-card.html` (the card has no page count; leave it)
+- SEO-page meta/OG/Twitter tags (those describe the free articles, not the PDF length)
+- The "one-page checklist" phrase in chapter 5 (that is a chapter feature, not the PDF
+  length)
 
 ## Placeholders to fill
 
 - [ ] Sample PDF page previews in the dashed placeholder on the home page
-- [ ] Final PDF page count (see "Page count: deliberately omitted" above)
+- [x] Final PDF page count: 26 pages (see "Page count: 26 (final)" above)
 - [ ] Optional: real PDF filename / version string once it exists
 - [ ] If the Grok Bot pricing figures change before launch, update the tier table in
       `pricing-explained.html`, the "Which plan do I need" FAQ answer and JSON-LD in
@@ -150,16 +166,20 @@ of those spots should carry the real number, update the `Product` JSON-LD descri
 
 ## Verification run for this change (local)
 
-- Served the site with `python3 -m http.server` and confirmed every page returns 200,
-  including the three new pages and the renamed `sales-policy.html`.
+- Served the site with `python3 -m http.server` and confirmed all eight pages return 200:
+  `index.html`, `get-started.html`, `pricing-explained.html`, `what-can-grok-bot-do.html`,
+  `terms.html`, `privacy.html`, `sales-policy.html`, `404.html`.
 - Checked every internal `href`/`src` resolves to a real file; no links to the deleted
   `refund.html` remain.
 - Confirmed `sitemap.xml` lists every indexable page and no others.
 - Validated both JSON-LD blocks on `index.html` as JSON and diffed the FAQ JSON-LD text
-  against the visible `<details>` content; confirmed each subpage's `BreadcrumbList`
-  JSON-LD matches its visible breadcrumb.
+  against the visible `<details>` content (including the 26-page format answer); confirmed
+  each subpage's `BreadcrumbList` JSON-LD matches its visible breadcrumb.
 - Ran axe-core against all eight pages.
 - Grepped the whole repo for em dashes, en dashes, "refund", "money back", "guarantee",
   "10x", and `BUY_URL_PLACEHOLDER`: no unexpected matches.
 - Confirmed the buy button `href` is byte-identical
   (`https://buy.stripe.com/14A6oI05U7hmfUZ0LU9EI00`) on every instance across every page.
+- Confirmed "26-page" / "26 pages" appears only in the copy listed under "Page count: 26
+  (final)", and that price, buy URL, sales-final lines, and the unofficial disclosure
+  were not changed.
