@@ -7,7 +7,7 @@ Plain-English terms and privacy on this site are **template-level basics, not le
 - [x] One-page static site at the repo root (`index.html`, `styles.css`)
 - [x] Relative asset paths only (safe for GitHub Pages project URL)
 - [x] `.nojekyll`, `404.html`, `assets/`
-- [x] Terms, privacy, and refund pages
+- [x] Terms and privacy pages
 - [x] Independent / unofficial notice in the banner and footer (no official logos)
 - [x] No fake testimonials, ratings, sales counts, or urgency timers
 - [x] Price is a CSS custom property: `--price` in `styles.css` (currently `$24`)
@@ -52,5 +52,5 @@ That is the whole swap. Keep `#buy` as the section id so in-page links still wor
 - [ ] Confirm the Stripe account's bank payout details (provider is already chosen and live: Stripe)
 - [ ] Approve the $24 price (change `--price` in `styles.css` and the SITE CONFIG comment in `index.html` if it moves)
 - [ ] Confirm support email `taquino-inbox@agentmail.to` (search-replace that string if you swap)
-- [ ] Legal review of terms, privacy, and refunds before charging cards
+- [ ] Legal review of terms and privacy before charging cards
 - [ ] Finish writing the PDF
