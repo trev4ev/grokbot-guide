@@ -3,44 +3,92 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Privacy · The Grok Bot Starter Guide</title>
+    <title>Privacy · The Unofficial Grok Bot Starter Guide</title>
     <meta
       name="description"
-      content="Privacy information for The Grok Bot Starter Guide site and purchases."
+      content="Privacy information for The Unofficial Grok Bot Starter Guide site and purchases: no cookies, no analytics, Stripe handles payment."
     />
-    <link rel="canonical" href="https://trev4ev.github.io/grokbot-guide/privacy.html" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://trevoraquino.me/grokbot-guide/privacy.html" />
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="assets/favicon.svg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="The Unofficial Grok Bot Starter Guide" />
+    <meta property="og:title" content="Privacy · The Unofficial Grok Bot Starter Guide" />
+    <meta
+      property="og:description"
+      content="Privacy information for The Unofficial Grok Bot Starter Guide site and purchases: no cookies, no analytics, Stripe handles payment."
+    />
+    <meta property="og:url" content="https://trevoraquino.me/grokbot-guide/privacy.html" />
+    <meta property="og:image" content="https://trevoraquino.me/grokbot-guide/assets/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Privacy · The Unofficial Grok Bot Starter Guide" />
+    <meta
+      name="twitter:description"
+      content="Privacy information for this site and purchases: no cookies, no analytics, Stripe handles payment."
+    />
+    <meta name="twitter:image" content="https://trevoraquino.me/grokbot-guide/assets/og-image.png" />
     <meta name="theme-color" content="#0d5c4d" />
+    <link rel="preload" href="styles.css" as="style" />
     <link rel="stylesheet" href="styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://trevoraquino.me/grokbot-guide/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Privacy",
+            "item": "https://trevoraquino.me/grokbot-guide/privacy.html"
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <a class="skip" href="#main">Skip to content</a>
     <header class="site-header">
       <div class="wrap">
-        <a class="mark" href="index.html">
-          <img class="mark-icon" src="assets/favicon.svg" width="32" height="32" alt="" />
-          The Grok Bot Starter Guide
-        </a>
+        <a class="mark" href="index.html">The Unofficial Grok Bot Starter Guide</a>
         <nav class="nav" aria-label="Primary">
           <a href="index.html">Home</a>
-          <a href="terms.html">Terms</a>
-          <a href="refund.html">Refunds</a>
+          <a href="get-started.html">Get started</a>
+          <a href="pricing-explained.html">Pricing</a>
+          <a href="what-can-grok-bot-do.html">What it can do</a>
         </nav>
       </div>
     </header>
     <div class="notice" role="region" aria-label="Disclosure">
       <div class="wrap">
-        Independent, unofficial guide. Not affiliated with, endorsed by, or sponsored by
+        <strong class="disclosure-label">Disclosure:</strong>
+        Independent, unofficial guide by Trevor Aquino. Not affiliated with or endorsed by
         SpaceX, xAI, or the makers of Grok Bot.
       </div>
     </div>
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <div class="wrap">
+        <ol class="breadcrumb-list">
+          <li><a href="index.html">Home</a></li>
+          <li aria-current="page">Privacy</li>
+        </ol>
+      </div>
+    </nav>
     <main id="main" class="legal-page">
       <div class="wrap">
         <h1>Privacy</h1>
         <p>Last updated 1 November 2026.</p>
         <p>
-          This site is a static marketing page for <strong>The Grok Bot Starter Guide</strong>,
-          sold by Trevor Aquino, United States.
+          This site is a static marketing page for <strong>The Unofficial Grok Bot Starter
+          Guide</strong>, sold by Trevor Aquino, United States.
         </p>
 
         <h2>This website</h2>
@@ -53,23 +101,25 @@
 
         <h2>Purchases</h2>
         <p>
-          Checkout is handled by Stripe. Stripe processes your payment data. After payment
-          you are redirected straight to the PDF download, and Stripe also emails you a
-          receipt. This site does not collect or store card numbers, bank details, or
-          checkout forms.
+          Checkout is handled by Stripe, which processes your payment data. After payment
+          you are taken straight to the PDF download page. Separately, an automatic email
+          from <a href="mailto:taquino-inbox@agentmail.to">taquino-inbox@agentmail.to</a>
+          delivers the same download link. This site does not collect or store card numbers,
+          bank details, or checkout forms.
         </p>
 
         <h2>Email</h2>
         <p>
-          Stripe uses the email address you give at checkout to send your receipt. I use
-          that same address to send a revised file if I publish one, and to handle support
-          or refunds. I do not sell it or use it for unrelated newsletters.
+          Stripe uses the email address you give at checkout to process your payment. I use
+          that same address to send your download link, a revised file if I publish one, and
+          to handle support or sales-policy questions. I do not sell it or use it for
+          unrelated newsletters.
         </p>
         <p>
           If you email
           <a href="mailto:taquino-inbox@agentmail.to">taquino-inbox@agentmail.to</a>,
-          I keep that thread long enough to help you and to keep a record of the refund or
-          delivery issue.
+          I keep that thread long enough to help you and to keep a record of the delivery
+          issue.
         </p>
 
         <h2>What I do not collect on this site</h2>
@@ -90,16 +140,22 @@
     <footer class="site-footer">
       <div class="wrap">
         <p>
-          Independent, unofficial guide. Not affiliated with, endorsed by, or sponsored by
-          SpaceX, xAI, or the makers of Grok Bot.
+          Independent, unofficial guide by Trevor Aquino. Not affiliated with or endorsed by
+          SpaceX, xAI or the makers of Grok Bot. Plan prices checked
+          <time class="meta" datetime="2026-10-31">Oct 31, 2026</time> and may change; see
+          <a href="https://x.ai/pricing">x.ai/pricing</a>.
         </p>
         <ul class="footer-links">
           <li><a href="index.html">Home</a></li>
+          <li><a href="get-started.html">Get started</a></li>
+          <li><a href="pricing-explained.html">Pricing explained</a></li>
+          <li><a href="what-can-grok-bot-do.html">What it can do</a></li>
           <li><a href="terms.html">Terms</a></li>
           <li><a href="privacy.html">Privacy</a></li>
-          <li><a href="refund.html">Refunds</a></li>
+          <li><a href="sales-policy.html">Sales policy</a></li>
+          <li><a href="mailto:taquino-inbox@agentmail.to">Support</a></li>
         </ul>
-        <p>© 2026 Trevor Aquino.</p>
+        <p>© 2026 Trevor Aquino. All rights reserved.</p>
       </div>
     </footer>
   </body>
