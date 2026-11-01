@@ -12,7 +12,7 @@ Plain-English terms and privacy on this site are **template-level basics, not le
 - [x] No fake testimonials, ratings, sales counts, or urgency timers
 - [x] Price is a CSS custom property: `--price` in `styles.css` (currently `$24`)
 - [x] Support email used consistently: `taquino-inbox@agentmail.to`
-- [x] Buy button is `BUY_URL_PLACEHOLDER` (`href="#buy"` + `is-soon` class)
+- [x] Buy button is wired to a live Stripe Payment Link ($24, card only for now)
 - [x] Contents outline is one ordered list in `index.html` (`#contents-list`)
 - [x] Sample-pages placeholder (no invented screenshots)
 - [x] Original SVG handoff diagram (`assets/handoff.svg`)
@@ -21,18 +21,24 @@ Plain-English terms and privacy on this site are **template-level basics, not le
 
 ## One-line checkout swap
 
-When you have a Stripe Payment Link, Gumroad URL, or Lemon Squeezy URL:
+Current status: wired to a live Stripe Payment Link, $24, card only for now
+(`https://buy.stripe.com/14A6oI05U7hmfUZ0LU9EI00`).
 
-1. In `index.html`, find both `BUY_URL_PLACEHOLDER` comments.
-2. Set `href` to the live URL (example: `https://buy.stripe.com/...`).
-3. Remove the `is-soon` class and the `aria-disabled="true"` attribute.
-4. Change the button label from `Checkout opening soon` to `Buy the guide`.
+To point the buy buttons at a different Stripe Payment Link, Gumroad URL, or Lemon
+Squeezy URL later:
+
+1. In `index.html`, find the `BUY_URL` line in the SITE CONFIG comment and the two
+   buy-button comments right above each `<a class="btn btn-primary">` link.
+2. Set each `href` (and the SITE CONFIG comment) to the new URL.
+3. Keep the `target="_blank"` and `rel="noopener"` attributes, and keep the label
+   `Buy the guide`.
+4. Update this checklist and `README.md` with the new provider and price if either
+   changes.
 
 That is the whole swap. Keep `#buy` as the section id so in-page links still work.
 
 ## Placeholders to fill
 
-- [ ] Live `BUY_URL` (see swap above)
 - [ ] Sample PDF page previews in the dashed placeholder on the home page
 - [ ] Confirm PDF page count in copy once the manuscript is locked (now: “about 20 to 30 pages”)
 - [ ] Date-stamp the “plans and pricing” chapter when those figures are checked
@@ -43,7 +49,7 @@ That is the whole swap. Keep `#buy` as the section id so in-page links still wor
 
 - [ ] Create or confirm the GitHub repo and push this branch
 - [ ] Enable GitHub Pages: Settings → Pages → Deploy from branch `main` (or `docs` / GitHub Actions, your choice), site URL `https://trev4ev.github.io/grokbot-guide/`
-- [ ] Choose and verify the payment provider identity (Stripe / Gumroad / Lemon Squeezy) and bank payout details
+- [ ] Confirm the Stripe account's bank payout details (provider is already chosen and live: Stripe)
 - [ ] Approve the $24 price (change `--price` in `styles.css` and the SITE CONFIG comment in `index.html` if it moves)
 - [ ] Confirm support email `taquino-inbox@agentmail.to` (search-replace that string if you swap)
 - [ ] Legal review of terms, privacy, and refunds before charging cards

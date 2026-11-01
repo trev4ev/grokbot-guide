@@ -7,7 +7,7 @@
       SITE CONFIG (edit here, then match styles.css --price)
       PRICE: $24
       SUPPORT_EMAIL: taquino-inbox@agentmail.to
-      BUY_URL: #buy   <-- BUY_URL_PLACEHOLDER. Replace with Stripe Payment Link / Gumroad / Lemon Squeezy URL.
+      BUY_URL: https://buy.stripe.com/14A6oI05U7hmfUZ0LU9EI00 (live Stripe Payment Link; see CHECKLIST.md to swap providers)
       CONTENTS: keep the ordered list in #whats-inside in sync with this list
         1. Getting set up and how Grok Bot actually works
         2. Using multiple bots well (when to split work, naming and scoping, routines, handoffs, with diagrams)
@@ -86,8 +86,8 @@
             with real prompts, current plans, and the habits that keep you out of trouble.
           </p>
           <div class="hero-actions">
-            <!-- BUY_URL_PLACEHOLDER: href="#buy" until a live checkout URL exists. -->
-            <a class="btn btn-primary is-soon" href="#buy">Checkout opening soon</a>
+            <!-- Buy URL: https://buy.stripe.com/14A6oI05U7hmfUZ0LU9EI00 (Stripe Payment Link, see CHECKLIST.md to swap). -->
+            <a class="btn btn-primary" href="https://buy.stripe.com/14A6oI05U7hmfUZ0LU9EI00" target="_blank" rel="noopener">Buy the guide</a>
             <a class="btn btn-ghost" href="#whats-inside">See what is inside</a>
           </div>
           <p class="meta-line">
@@ -212,14 +212,21 @@
             <p class="price-display"><span class="price-value"></span></p>
             <p>One-time purchase of the PDF. No subscription on this guide.</p>
             <p class="fine">
-              Checkout is not live yet. When it is, this button will open a Stripe checkout
-              page. After you pay, Stripe emails you a receipt and sends you straight to a
-              page to download the PDF.
+              This button opens a Stripe checkout page. After you pay, you are redirected
+              straight to the PDF download. Stripe also emails you a receipt, but the
+              receipt does not include the download link. If the download does not start,
+              email
+              <a href="mailto:taquino-inbox@agentmail.to">taquino-inbox@agentmail.to</a>
+              with the receipt.
             </p>
-            <!-- BUY_URL_PLACEHOLDER: replace href="#buy", remove is-soon, change label to Buy the guide. -->
+            <!-- Buy URL: https://buy.stripe.com/14A6oI05U7hmfUZ0LU9EI00 (Stripe Payment Link, see CHECKLIST.md to swap). -->
             <p>
-              <a class="btn btn-primary is-soon" href="#buy" aria-disabled="true"
-                >Checkout opening soon</a
+              <a
+                class="btn btn-primary"
+                href="https://buy.stripe.com/14A6oI05U7hmfUZ0LU9EI00"
+                target="_blank"
+                rel="noopener"
+                >Buy the guide</a
               >
             </p>
           </div>
@@ -227,7 +234,7 @@
             <h3>What you get</h3>
             <ul>
               <li>The Grok Bot Starter Guide as a designed PDF (about 20 to 30 pages).</li>
-              <li>Stripe emails you a receipt, then sends you to a page to download the PDF.</li>
+              <li>You are redirected straight to the PDF download. Stripe also emails a receipt, but it does not include the download link.</li>
               <li>A 14-day, no-questions-asked refund. Email support.</li>
               <li>If I publish a revised file, I will send it to the email used at checkout.</li>
             </ul>
@@ -249,10 +256,11 @@
             <details>
               <summary>How do I get the file after I pay?</summary>
               <p>
-                Stripe emails you a receipt and redirects you to a page where you download
-                the PDF. If that page does not load or you lose it, email
+                After payment you are redirected straight to the PDF download. Stripe also
+                emails you a receipt, but the receipt does not include the download link. If
+                the download does not start, email
                 <a href="mailto:taquino-inbox@agentmail.to">taquino-inbox@agentmail.to</a>
-                with your receipt and I will send the file directly. This site does not host
+                with the receipt and I will send the file directly. This site does not host
                 a login or a file locker.
               </p>
             </details>

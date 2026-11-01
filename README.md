@@ -20,7 +20,7 @@ Open `http://127.0.0.1:47391/`.
 | --- | --- |
 | Price | `--price` in `styles.css` (and the comment at the top of `index.html`) |
 | Support email | `taquino-inbox@agentmail.to` (search-replace) |
-| Buy URL | `BUY_URL_PLACEHOLDER` in `index.html` (see `CHECKLIST.md`) |
+| Buy URL | Live Stripe Payment Link in `index.html` ($24, card only for now; see `CHECKLIST.md` to swap providers) |
 | Chapter list | `#contents-list` in `index.html` |
 
 ## Files
